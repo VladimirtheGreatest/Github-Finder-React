@@ -10,9 +10,10 @@ class App extends Component {
     loading: false
   }
 
- async componentDidMount () {
+ async componentDidMount () {  
    this.setState({ loading: true });
-   const res = await axios.get('https://api.github.com/users')
+   //we are using environment variables so we do not run out of request from github, check .env.local file
+   const res = await axios.get(`https://api.github.com/users?client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`)
    this.setState({ users: res.data, loading: false });
   }
 
