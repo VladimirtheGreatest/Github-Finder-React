@@ -8,6 +8,8 @@ export class Search extends Component {
 
     static propTypes = {
         searchUsers: PropTypes.func.isRequired,
+        clearUsers: PropTypes.func.isRequired,
+        showClear: PropTypes.bool.isRequired
     }
 
     onChange = e => this.setState({ [e.target.name]: e.target.value })
@@ -19,6 +21,7 @@ export class Search extends Component {
     };
 
     render() {
+        const {clearUsers, showClear} = this.props;  //destructuring instead of this.props.clearUsers and this.props.showClear
         return (
             <div>
                 <form onSubmit={this.onSubmit} className="form">
@@ -30,7 +33,8 @@ export class Search extends Component {
                  />
                 <input type="Submit" name="Search" className="btn btn-dark btn-block" /> 
                 </form>
-            </div>
+                {showClear && (<button className="btn btn-light btn-block" onClick={clearUsers}>Clear</button>)}
+            </div>//clear button thats visible only if meet certain condition, check app.js for conditions
         )
     }
 }
