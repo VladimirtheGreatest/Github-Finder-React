@@ -70,7 +70,7 @@ const App = () =>  {
       showClear={users.length > 0 ? true : false}  //if array is empty we will not show the clear button
       setAlert={showAlert}
      />
-     <Users loading={loading} users={users} />
+     <Users />
          </Fragment>
        )}/>
        <Route exact path='/about' component={About} />
