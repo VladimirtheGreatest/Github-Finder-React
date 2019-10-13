@@ -1,4 +1,6 @@
-https://githubuserssearchreact.netlify.com
+
+<a href="https://githubuserssearchreact.netlify.com" target="_blank">Click here to see the application</a>
+
 
 <br>
 <br>
