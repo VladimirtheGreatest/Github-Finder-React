@@ -39,13 +39,6 @@ const App = () =>  {
     setLoading(false);
   };
 
-  
-
-  //Clear users from state
-   const clearUsers = () => {
-    setUsers([]);
-    setLoading(false);
-  }
 
   //Set Alert
  const showAlert = (msg, type) => {
@@ -65,9 +58,9 @@ const App = () =>  {
        <Route exact path='/' render={props => (
          <Fragment>
            <Search 
-     //searchUsers={searchUsers} I can access this through context
-     clearUsers={clearUsers} //clearUsers props from Search.js on Click function, this will fireoff clearUsers and will empty the array
-      showClear={users.length > 0 ? true : false}  //if array is empty we will not show the clear button
+     //searchUsers={searchUsers} I can access this through context, we no longer need clearusers and showclear passed as a props since it is already in the githubstate
+    // clearUsers={clearUsers} clearUsers props from Search.js on Click function, this will fireoff clearUsers and will empty the array
+      //showClear={users.length > 0 ? true : false}  if array is empty we will not show the clear button
       setAlert={showAlert}
      />
      <Users />
