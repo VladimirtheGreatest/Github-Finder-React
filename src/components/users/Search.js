@@ -33,7 +33,7 @@ const Search = () => {
                  />
                 <input type="Submit" name="Search" className="btn btn-dark btn-block" /> 
                 </form>
-                {GithubContext.users.length > 0 && (<button className="btn btn-light btn-block" onClick={GithubContext.clearUsers}>Clear</button>)} 
+                {GithubContext.users.length > 0 && (<button className="btn btn-danger btn-block" onClick={GithubContext.clearUsers}>Clear</button>)} 
             </div>//clear button thats visible only if meet certain condition, check app.js for conditions, check props in app.js for clear users(very good example for using props)
         )
     
