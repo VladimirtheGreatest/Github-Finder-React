@@ -11,6 +11,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+In this course I learnt to master React 16.8+ concepts including how to create a Flux pattern using the Context API with the useContext and useReducer hooks. This project is part of the course React front to back 2019 from Traversy media.
+
 ## Available Scripts
 
 In the project directory, you can run:
